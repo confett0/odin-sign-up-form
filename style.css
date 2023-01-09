@@ -21,13 +21,25 @@ a:hover {
     color: #D88342;
 }
 
+h1 {
+    font-family: Raleway;
+    text-transform: uppercase;
+}
+
 h2 {
     margin-bottom: 25px;
 }
 
-.logo {
-    background: url(./images/casey-horner.jpg) center/cover;
+.sidebar {
+    background: url(./images/casey-horner.jpg) center/cover no-repeat;
+    color: #fff;
+    padding: 170px 0;
+    text-align: center;
     width: 40%;
+}
+
+.logo-image {
+    width: 50px;
 }
 
 .content {
@@ -83,11 +95,6 @@ input:focus {
     outline: none;
 }
 
-/*input:invalid:focus {
-    border: 1px solid red;
-    outline: none;
-}*/
-
 button {
     background: #036D73;
     border: 1px solid #036D73;
@@ -103,4 +110,26 @@ button {
 button:hover {
     background: #D88342;
     border: 1px solid #D88342;
+}
+
+@media screen and (max-width: 920px) {
+
+    body {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        padding: 50px 0;
+        height: 250px;
+        width: 100%;
+    }
+
+    .content {
+        min-height: calc(100vh - 250px);
+        width: 100%;
+    }
+
+    .form-input input {
+        width: 250px;
+    }
 }
